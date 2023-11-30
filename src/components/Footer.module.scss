@@ -1,0 +1,137 @@
+@use "./abstracts";
+
+.wrapFooter {
+    padding: 4rem 0 2rem;
+    background-color: #09192a;
+    .footer_contact_Icon {
+        color: #fff;
+        font-size: 1.8rem;
+        padding: 0.8rem 1.3rem;
+        background-color: rgb(252, 76, 2);
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    .contact_item {
+        @include abstracts.breakpoint(lg) {
+            & ~ .contact_item {
+                margin-top: 1.5rem;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a,
+        p {
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                color: rgb(252, 76, 2);
+            }
+        }
+    }
+
+    .main_footer {
+        border-top: 0.1rem solid #12325499;
+        border-bottom: 0.1rem solid #12325499;
+
+        margin-top: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+    .col_1 {
+        text-align: left;
+        p {
+            margin: 1.5rem 0;
+            color: #fff;
+            font-size: 1.03rem;
+        }
+        .ListIcon {
+            display: flex;
+            padding: 0;
+            li {
+                padding: 0.5rem 0.8rem;
+                background-color: #0c233b;
+                border-radius: 50%;
+                transition: 0.4s ease-in-out;
+                &:hover {
+                    background-color: rgb(252, 76, 2);
+                }
+            }
+            li ~ li {
+                margin-left: 1.4rem;
+            }
+            a {
+                color: #fff;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .col_2,
+    .col_3 {
+        h5 {
+            color: rgb(252, 76, 2);
+        }
+        .footer_service {
+            li {
+                padding-left: 1.2rem;
+                text-align: left;
+                & ~ li {
+                    margin-top: 0.5rem;
+                }
+                &:hover a {
+                    color: rgb(252, 76, 2) !important;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 0.1rem;
+                }
+            }
+        }
+    }
+    .col_3 {
+        h5 {
+            padding-left: 1.1rem;
+        }
+    }
+    .col_4 {
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            text-align: center !important;
+        }
+        padding-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        h5 {
+            color: rgb(252, 76, 2);
+        }
+        button {
+            background-color: rgb(252, 76, 2);
+            color: #fff;
+            border: none;
+            padding: 0.3rem;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 2rem;
+            color: #fff;
+            text-align: left;
+            font-size: 0.9rem;
+            transform: skewX(-20deg);
+        }
+    }
+    .footer_copyright {
+        @include abstracts.breakpoint(lg) {
+            font-size: 0.9rem;
+        }
+        margin-top: 2rem;
+        p {
+            color: #fff;
+        }
+    }
+}

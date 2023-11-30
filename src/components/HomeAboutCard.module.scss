@@ -1,0 +1,81 @@
+@use "./abstracts";
+
+.wrap_Aboutcarro {
+    @include abstracts.breakpoint(lg) {
+        margin: 5rem 0 3rem;
+        .About_Img {
+            margin: 2rem 0;
+            width: 90%;
+            img {
+                width: 100%;
+            }
+        }
+        .wrapRow {
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+        }
+        h2 {
+            font-size: 2.1rem !important;
+        }
+        .sub_Content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & > div:nth-child(2) {
+                margin-top: 1rem;
+                width: 80%;
+            }
+        }
+    }
+    margin-bottom: 4.7rem;
+}
+.About_Content {
+    text-align: left;
+    h5 {
+        width: auto;
+        color: rgb(252, 76, 2);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #09192a;
+    }
+    .subTitle {
+        margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    .desc {
+        font-size: 1.14rem;
+    }
+}
+
+.About_Img {
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    img {
+        width: 30rem;
+        object-fit: cover;
+    }
+}
+
+.sub_Content {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    img {
+        width: 3.4rem;
+    }
+    h4 {
+        margin: 0.5rem 0;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}

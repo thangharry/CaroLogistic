@@ -1,0 +1,183 @@
+@use "./abstracts";
+
+.wrap_service_layer {
+    @include abstracts.breakpoint(lg) {
+        height: auto;
+        .product_main_content {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product_service {
+            margin: 1rem 0 !important;
+            width: 80%;
+            p {
+                width: 100%;
+            }
+        }
+    }
+    position: relative;
+    background-image: url(../imgs/service_layer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #09192a;
+        opacity: 0.9;
+        z-index: 1;
+    }
+    .service_title {
+        padding-top: 4.5rem;
+        text-align: center;
+        z-index: 1;
+        text-transform: capitalize;
+        color: #fff;
+        h2 {
+            @include abstracts.breakpoint(lg) {
+                width: 100%;
+            }
+            margin: 0 auto;
+            width: 24rem;
+            font-weight: 800;
+            font-size: 2.2rem;
+        }
+        span {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.product_main_content {
+    margin-top: 4.5rem;
+}
+.product_service {
+    & ~ .product_service {
+        margin-left: 1rem;
+    }
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    &:hover img {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+    a {
+        &::before {
+            content: "";
+            width: 100%;
+            height: 83%;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            bottom: 0;
+            opacity: 0.3;
+            background-color: #09192a;
+        }
+    }
+
+    .wrap_img_product,
+    img {
+        overflow: hidden;
+        width: 100%;
+    }
+    .wrap_content_product {
+        z-index: 5;
+        position: absolute;
+        top: 15.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        figure,
+        img {
+            width: 4rem;
+        }
+        h3 {
+            color: #fff;
+            text-transform: capitalize;
+            width: max-content;
+        }
+    }
+    p {
+        margin: 0 auto;
+        width: 21rem;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+}
+.LinkService {
+    margin: 3rem 0 2rem;
+    z-index: 1;
+    p {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    a {
+        color: rgb(252, 76, 2);
+        text-decoration: none !important;
+    }
+}
+#wrapSer1 {
+    @include abstracts.breakpoint(lg) {
+        .service_title {
+            h2 {
+                width: 100% !important;
+            }
+        }
+        .product_service {
+            margin-left: 0 !important;
+            padding: 0 1rem;
+            a {
+                &::before {
+                    width: 92%;
+                    right: 50% !important;
+                    transform: translateX(50%);
+                }
+            }
+            & ~ .product_service {
+                margin-top: 1rem;
+            }
+        }
+    }
+    .service_title {
+        padding-top: 0rem;
+        text-align: center;
+        z-index: 1;
+        text-transform: capitalize;
+        color: #09192a;
+        h2 {
+            margin: 0 auto;
+            width: 24rem;
+            font-weight: 800;
+            font-size: 2.2rem;
+        }
+    }
+    .product_main_content {
+        margin-top: 2rem;
+        @include abstracts.breakpoint(lg) {
+            .product_service {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .product_service {
+        p {
+            color: #09192a;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@use "./abstracts";
+
+.wrapMOT {
+    padding-top: 4rem;
+    margin-bottom: 4.5rem;
+    .wrap_MOTCotent {
+        h5 {
+            color: rgb(252, 76, 2);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+        }
+        h2 {
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+    }
+    li {
+        margin-right: 15rem;
+    }
+    .carouselsItem {
+        border-bottom: 0.3rem solid rgb(252, 76, 2);
+        width: 80%;
+        // margin-right: 2rem;
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        h3 {
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        p {
+            text-transform: capitalize;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+.wrapCarou {
+    @include abstracts.breakpoint(lg) {
+        margin-left: 0 !important;
+
+        ul,
+        button {
+            display: none !important;
+        }
+    }
+    margin-left: 4rem;
+    ul,
+    button {
+        display: none !important;
+    }
+    & ~ .wrapCarou {
+        margin-top: 3rem;
+    }
+}
+#Ot {
+    .carouselsItem {
+        width: 100%;
+    }
+    .wrapCarou {
+        margin-left: 0;
+    }
+}

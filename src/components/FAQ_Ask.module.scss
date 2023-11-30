@@ -1,0 +1,62 @@
+@use "./abstracts";
+
+.wrapFAQ {
+    margin: 4rem auto;
+    .title {
+        margin-bottom: 3rem;
+        h5 {
+            color: rgb(252, 76, 2);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
+}
+.media {
+    background-color: #f8f8f8;
+    padding: 1.5rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    .faq_number {
+        margin-left: -1rem;
+        padding-left: 1rem;
+        border-left: 0.4rem solid rgb(252, 76, 2);
+        h3 {
+            margin: 0;
+            color: #09192a;
+            opacity: 0.8;
+            font-weight: 700;
+            font-size: 2.2rem;
+        }
+    }
+    .media_body {
+        text-align: left;
+        margin-left: 1rem;
+        h5 {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
+.content {
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .media {
+            margin-left: 0rem !important;
+        }
+    }
+    .media ~ .media {
+        margin-left: 1rem;
+    }
+    & ~ .content {
+        margin-top: 1rem;
+    }
+}

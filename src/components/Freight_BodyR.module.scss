@@ -1,0 +1,94 @@
+@use "./abstracts";
+
+.wrapFreightBodyR {
+    h2,
+    p {
+        text-align: left;
+    }
+    h2 {
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+.wrapbgR {
+    @include abstracts.breakpoint(lg) {
+        margin-top: 2rem;
+    }
+    width: 100%;
+    margin-bottom: 3rem;
+    .bg {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.wrapItem {
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+    }
+    margin: 0;
+}
+.Item {
+    @include abstracts.breakpoint(lg) {
+        width: 100%;
+    }
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+    img {
+        width: 20%;
+    }
+    .Content {
+        margin-left: 1rem;
+        text-align: left;
+    }
+    h4 {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    & ~ .Item {
+        color: #fff;
+        background-color: #1d428a;
+    }
+}
+
+.service {
+    margin-top: 2rem;
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 0 !important;
+        .serItem {
+            margin-left: 0rem !important;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            width: 90%;
+        }
+    }
+}
+.serItem {
+    & ~ .serItem {
+        margin-left: 1rem;
+    }
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
+    text-align: left;
+    figure {
+        width: 20%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

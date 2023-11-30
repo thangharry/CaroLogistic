@@ -1,0 +1,47 @@
+@use "./abstracts";
+
+.wrapTeam {
+    @include abstracts.breakpoint(lg) {
+        .wrapBody {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .wrapImg {
+            margin-top: 1rem;
+        }
+    }
+    margin: 4rem auto;
+    .Content {
+        text-align: left;
+        margin-right: 3rem;
+        h5 {
+            color: rgb(252, 76, 2);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+        }
+        figure {
+            width: 38%;
+            margin: 2rem 0 0;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .wrapImg {
+        figure {
+            margin: 0;
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

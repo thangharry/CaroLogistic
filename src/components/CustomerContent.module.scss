@@ -1,0 +1,94 @@
+@use "./abstracts";
+
+.wrapCustomer {
+    @include abstracts.breakpoint(lg) {
+        // width: -webkit-fill-available;
+        display: inline-block;
+        margin-top: -15%;
+    }
+    height: auto;
+
+    margin-top: -7%;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .slider {
+        @include abstracts.breakpoint(lg) {
+            margin-right: 2rem;
+            button {
+                display: none !important;
+            }
+        }
+        padding: 0;
+        margin-right: -3rem;
+    }
+    .coment {
+        width: 100%;
+        background-color: #fff;
+        padding-bottom: 2.5rem;
+
+        box-shadow: 0px 0px 8px 1px rgba(71, 69, 69, 0.75);
+        -webkit-box-shadow: 0px 0px 8px 1px rgba(71, 69, 69, 0.75);
+        -moz-box-shadow: 0px 0px 8px 1px rgba(71, 69, 69, 0.75);
+        figure {
+            font-size: 3.2rem;
+            color: #1d428a;
+        }
+        p {
+            margin: 0 auto;
+            text-align: center;
+            width: 87%;
+            font-size: 1.1rem;
+        }
+    }
+    .auther {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 6rem;
+        }
+        h4 {
+            margin: 0 auto;
+            text-transform: capitalize;
+            text-align: center;
+
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        p {
+            text-transform: capitalize;
+        }
+    }
+}
+.CarouselItem {
+    // transform: translateY(-30%);
+    margin: auto;
+    width: 80%;
+}
+#wrapIdFalse {
+    margin: 5rem 0 !important;
+    .Containerw {
+        margin: 0;
+    }
+    .CarouselItem {
+        @include abstracts.breakpoint(lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin-top: 1rem !important;
+            .Col ~ .Col {
+                margin-top: 1rem;
+            }
+        }
+
+        & ~ .CarouselItem {
+            margin-top: 3rem;
+        }
+        width: 100%;
+    }
+}

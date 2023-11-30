@@ -1,0 +1,88 @@
+@use "./abstracts";
+
+.wrapExp {
+    background-color: #1d428a;
+    padding: 3rem 0;
+    color: #fff;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left {
+            text-align: left;
+            // margin-right: 1rem;
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+            button {
+                background-color: rgb(252, 76, 2);
+                border: none;
+                transition: 0.4s ease-in-out;
+                &:hover {
+                    background-color: #09192a;
+                }
+                a {
+                    color: #fff;
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+            }
+        }
+        .right {
+            @include abstracts.breakpoint(lg) {
+                padding: 0 !important;
+                margin-top: 1rem;
+                .wrapRight {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0 1rem;
+                }
+                .rightItem {
+                    margin-left: 0 !important;
+                    padding: 1rem 0 0rem 1rem !important;
+                    figure {
+                        width: 15% !important;
+                    }
+                }
+            }
+            padding: 0 0 0 3rem;
+            .rightItem {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: #fff;
+                color: #000;
+                padding: 2rem;
+                figure {
+                    width: 20%;
+                }
+                img {
+                    width: 100%;
+                }
+                h4 {
+                    font-weight: 700;
+                }
+                p {
+                    text-align: left;
+                    font-size: 1.1rem;
+                }
+            }
+            .rightItem ~ .rightItem {
+                margin-left: 1rem;
+            }
+
+            .wrapRight ~ .wrapRight {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

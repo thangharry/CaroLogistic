@@ -1,0 +1,46 @@
+@use "./abstracts";
+
+.wrapHome2Value {
+    background-color: #1d428a;
+    color: #fff;
+    padding: 6rem 0 3rem;
+    span {
+        font-size: 2.7rem;
+        font-weight: 700;
+    }
+    p {
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+#sizeheight {
+    padding-top: 25rem;
+}
+#bgAu2 {
+    position: relative;
+    margin: -35rem 0 3rem;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #09192a;
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+    }
+    img {
+        height: 100%;
+        padding: 0;
+    }
+}
+@include abstracts.breakpoint(lg) {
+    .RowItem {
+        margin: 0 !important;
+    }
+    .ColItem {
+        padding-right: 0 !important;
+    }
+}

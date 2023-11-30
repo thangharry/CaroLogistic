@@ -1,0 +1,108 @@
+@use "./abstracts";
+
+.wrapChooseUs {
+    @include abstracts.breakpoint(lg) {
+        .sub_Content {
+            position: static;
+            margin-top: 1rem;
+            figure {
+                text-align: center;
+                margin: 0 auto;
+                width: 90%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .content_chooseUs {
+            padding: 2rem 1rem;
+        }
+        .About_Content {
+            p {
+                width: auto;
+            }
+            button {
+                margin-top: 1rem !important;
+            }
+        }
+    }
+    position: relative;
+    padding: 4rem 0;
+
+    background-image: url(../imgs/chooseUs_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        background-color: #09192a;
+
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+
+        display: block;
+    }
+}
+.content_chooseUs {
+    z-index: 2 !important;
+    background-color: #fff;
+    padding: 3rem 4rem;
+    height: auto;
+    position: relative;
+}
+.twocol {
+    display: flex;
+    align-items: center;
+}
+.About_Content {
+    text-align: left;
+    h5 {
+        color: rgb(252, 76, 2);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+    h2 {
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 2.7rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        width: 28rem;
+    }
+    button {
+        margin-top: 2rem;
+        background-color: rgb(252, 76, 2);
+        border: none;
+        width: 10rem;
+        transition: 0.4s ease-in-out;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        &:hover {
+            background-color: #1d428a;
+        }
+    }
+}
+.sub_Content {
+    position: relative;
+    figure {
+        width: 32rem;
+    }
+    img {
+        max-width: 100%;
+    }
+}

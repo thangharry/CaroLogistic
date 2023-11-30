@@ -1,0 +1,59 @@
+@use "./abstracts";
+
+.wrapPosit {
+    margin-bottom: 5rem;
+    .title {
+        h5 {
+            color: rgb(252, 76, 2);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+    }
+    .media {
+        @include abstracts.breakpoint(lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 2rem !important;
+            padding: 0 2rem;
+            .Item {
+                margin-left: 0 !important;
+                & ~ .Item {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        text-align: left;
+        margin-bottom: 4rem;
+        .Item {
+            & ~ .Item {
+                margin-left: 4rem;
+            }
+            figure {
+                width: 20%;
+                margin: 0;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            h4 {
+                margin-top: 1rem;
+                font-weight: 700;
+            }
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                color: rgb(252, 76, 2);
+                &:hover {
+                    color: #1d428a;
+                }
+            }
+        }
+    }
+}

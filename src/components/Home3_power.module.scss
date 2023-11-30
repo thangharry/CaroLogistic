@@ -1,0 +1,81 @@
+@use "./abstracts";
+
+.wrapPower {
+    margin-bottom: 4rem;
+}
+
+.wrapContent {
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5rem !important;
+        .wrapRight {
+            text-align: left;
+            margin-left: 0 !important;
+        }
+    }
+    display: flex;
+    align-items: flex-end;
+    margin-top: -12rem;
+}
+.wrapMainbg {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+.wrapLeft {
+    text-align: left;
+    margin-right: 3rem;
+    .avar {
+        width: 8rem;
+
+        img {
+            border: 0.3rem solid #fff;
+            width: 100%;
+        }
+    }
+    .quote {
+        color: rgb(252, 76, 2);
+        font-size: 3rem;
+    }
+    blockquote {
+        font-size: 1.1rem;
+        margin-bottom: 1.1rem;
+    }
+    .wrapchuky {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.wrapRight {
+    text-align: left;
+    background-color: #1d428afa;
+    color: #fff;
+    padding: 3rem 2rem;
+    width: 80%;
+    margin-left: 3rem;
+
+    h2 {
+        font-size: 2.9rem;
+        font-weight: 700;
+    }
+    p {
+        // font-size: 1.1rem;
+        margin: 1.5rem 0;
+    }
+    ul {
+        padding-left: 0;
+    }
+    li ~ li {
+        margin-top: 0.5rem;
+    }
+    .check {
+        color: rgb(252, 76, 2);
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,220 @@
+@use "./abstracts";
+
+.container {
+    @include abstracts.breakpoint(lg) {
+        display: inline-block;
+
+        .img1 {
+            margin-bottom: 2rem;
+            a {
+                text-decoration: none;
+            }
+            figure {
+                margin: 0 auto;
+                width: 90%;
+                height: 35vh;
+                img {
+                    height: 35vh;
+                    object-fit: cover;
+                }
+            }
+        }
+        .img2,
+        .img3 {
+        }
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "img1 img2"
+        "img1 img3";
+}
+
+.img1 {
+    grid-area: img1;
+    position: relative;
+    figure {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #09192a;
+            opacity: 0.4;
+        }
+        &:hover img {
+            transform: scale(1.1);
+            transition: 0.4s ease-in-out;
+        }
+
+        img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+        .dayTime {
+            z-index: 1;
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            color: #fff;
+            background-color: rgb(252, 76, 2);
+            padding: 0.4rem 1.2rem;
+            border-left: 0.3rem solid #fff;
+            border-bottom: 0.3rem solid #fff;
+        }
+        h6 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        p {
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-bottom: 0;
+        }
+    }
+    .airlinesContent {
+        @include abstracts.breakpoint(lg) {
+            position: static;
+            color: #000;
+        }
+        z-index: 1;
+        position: absolute;
+        bottom: 7%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4 {
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+        p {
+            text-align: center;
+            width: 80%;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+        button {
+            margin-top: 1rem;
+            width: 8rem;
+            background-color: rgb(252, 76, 2);
+            border: none;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                background-color: #09192a;
+            }
+            a {
+                text-transform: capitalize;
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 700;
+                line-height: 1rem;
+            }
+        }
+    }
+}
+
+.img2 {
+    @include abstracts.breakpoint(lg) {
+        margin-bottom: 1rem;
+        img {
+            height: 10vh !important;
+        }
+    }
+    grid-area: img2;
+    // background-color: yellow
+    img {
+        width: 100%;
+    }
+}
+
+.img3 {
+    grid-area: img3;
+    // background-color: blue;
+    img {
+        width: 100%;
+    }
+}
+
+.Header_content {
+    margin: 2rem 0 2rem;
+    h5 {
+        color: rgb(252, 76, 2);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    h2 {
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 2.7rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.col {
+    padding-left: 0;
+    figure {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+
+        &:hover img {
+            transition: 0.6s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    img {
+        height: inherit !important;
+        object-fit: cover;
+    }
+}
+.img2_content {
+    text-align: left;
+    .time {
+        color: rgb(252, 76, 2);
+        font-weight: 600;
+    }
+    h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    button {
+        background-color: transparent;
+        border: 0.1rem solid rgb(252, 76, 2);
+        &:hover {
+            background-color: #09192a;
+            & a {
+                color: white;
+            }
+        }
+        a {
+            color: rgb(252, 76, 2);
+            text-decoration: none;
+        }
+    }
+}
+
+.imgContainer {
+    height: 100%;
+}
+.imgRow {
+    height: 100%;
+}
+.wrapBlog {
+    margin-bottom: 3rem;
+}

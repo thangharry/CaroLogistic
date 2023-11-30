@@ -1,0 +1,45 @@
+@use "./abstracts";
+.FrontBox {
+    @include abstracts.breakpoint(lg) {
+        margin: 3rem auto;
+        .RowFrontBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .col_item {
+            position: static;
+            top: 10px;
+            width: 80%;
+        }
+    }
+}
+.col_item {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    top: -120px;
+    // background-color: red;
+    box-shadow: -2px 2px 13px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 2px 13px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 2px 13px -1px rgba(0, 0, 0, 0.75);
+    padding: 1.1rem;
+    a {
+        text-decoration: none;
+        color: black;
+
+        img {
+            width: 25%;
+        }
+        h4 {
+            text-align: center;
+            margin: 1rem 0;
+            text-transform: capitalize;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}

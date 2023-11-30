@@ -1,0 +1,115 @@
+@use "./abstracts";
+
+.wrapCard {
+    text-align: left;
+    margin: 1rem 1rem 4rem 1.5rem;
+
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    figure {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0;
+        width: 100%;
+
+        .avar {
+            width: 15%;
+            margin-right: 1rem;
+        }
+        .infoPeople {
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    }
+    .Title {
+        display: inline-block;
+        text-decoration: none;
+        color: #000;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+    .bg {
+        position: relative;
+        .bgImgs {
+            width: 100%;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            img:hover {
+                transform: scale(1.5);
+            }
+        }
+        .time {
+            position: absolute;
+            right: 7%;
+            top: 7%;
+            color: #fff;
+            background-color: rgb(252, 76, 2);
+            padding: 0.3rem 0.7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-left: 0.3rem solid #fff;
+            border-bottom: 0.3rem solid #fff;
+
+            h6 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+.titleBlog {
+    margin: 3rem 0 1rem;
+    h5 {
+        font-size: 1rem;
+        color: rgb(252, 76, 2);
+        letter-spacing: 0.1rem;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+}
+@include abstracts.breakpoint(lg) {
+    .slider {
+        padding: 0 !important;
+        button {
+            display: none !important;
+        }
+    }
+}
+#Col,
+#Col1 {
+    @include abstracts.breakpoint(lg) {
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+        width: 90%;
+    }
+    .avar {
+        width: 20%;
+    }
+    img {
+        width: 100%;
+    }
+}
+.ItemContent {
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

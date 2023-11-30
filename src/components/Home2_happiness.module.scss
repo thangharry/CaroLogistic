@@ -1,0 +1,48 @@
+@use "./abstracts";
+
+.wrapHappiness {
+    @include abstracts.breakpoint(lg) {
+        padding: 0 2rem;
+        .wrapMedia {
+            margin-top: 2rem;
+        }
+    }
+
+    padding: 2.2rem 0;
+    // contain
+    .wrapHapContent {
+        text-align: left;
+        h2 {
+            font-weight: 700;
+            font-size: 2.3rem;
+        }
+        h5 {
+            margin: 1rem 0;
+            font-weight: 700;
+            font-size: 1.02rem;
+            line-height: 1.7rem;
+        }
+        ul {
+            padding: 0;
+            margin-top: 1.9rem;
+            li {
+                font-size: 1.1rem;
+            }
+            span {
+                color: rgb(252, 76, 2);
+                font-weight: 700;
+                margin-right: 0.5rem;
+            }
+            li ~ li {
+                margin-top: 1rem;
+            }
+        }
+    }
+    // media
+    .wrapMedia {
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

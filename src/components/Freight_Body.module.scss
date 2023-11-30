@@ -1,0 +1,11 @@
+@use "./abstracts";
+
+.wrapFreight {
+    margin: 4rem 0;
+}
+.Content {
+    @include abstracts.breakpoint(lg) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
