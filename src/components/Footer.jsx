@@ -96,17 +96,17 @@ function Footer(props) {
                         <h5>About</h5>
                         <ul className={styles.footer_service}>
                             <li>
-                                <Link>Our Company</Link>
+                                <Link to="about us 1">Our Company</Link>
                             </li>
                             <li>
-                                <Link>Team</Link>
+                                <Link to="our team">Team</Link>
                             </li>
                             <li>
-                                <Link>Contact Us</Link>
+                                <Link to="contact 1">Contact Us</Link>
                             </li>
 
                             <li>
-                                <Link>FAQ</Link>
+                                <Link to="FAQ">FAQ</Link>
                             </li>
                         </ul>
                     </Col>
@@ -114,17 +114,17 @@ function Footer(props) {
                         <h5>Company</h5>
                         <ul className={styles.footer_service}>
                             <li>
-                                <Link>Our Services</Link>
+                                <Link to="services 1">Our Services</Link>
                             </li>
                             <li>
-                                <Link>Gallery</Link>
+                                <Link to="gallery grid">Gallery</Link>
                             </li>
                             <li>
-                                <Link>Blogs</Link>
+                                <Link to="blog grid">Blogs</Link>
                             </li>
 
                             <li>
-                                <Link>Packaging</Link>
+                                <Link to="packaging">Packaging</Link>
                             </li>
                         </ul>
                     </Col>
